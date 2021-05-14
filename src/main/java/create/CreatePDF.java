@@ -52,7 +52,7 @@ public class CreatePDF {
 		
 		BaseFont times = null;
 		try {
-			times = BaseFont.createFont(fontpath, "UTF-8", BaseFont.EMBEDDED);
+			times = BaseFont.createFont(fontpath, "cp1251", BaseFont.EMBEDDED);
 		} catch (DocumentException | IOException e) {
 			e.printStackTrace();
 		}
