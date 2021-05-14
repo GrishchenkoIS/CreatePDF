@@ -122,7 +122,7 @@ public class CreatePDF {
 		//добавление таблицы
 		 PdfPTable table = new PdfPTable(4); //создание таблицы с 4 столбцами
 		 addHeader(table);
-		 addRows(table);
+		 addRows(table, times);
 		 
 		 try {
 			document.add(table);
@@ -133,13 +133,14 @@ public class CreatePDF {
 	    document.close(); //закрытие и сохранение документа PDF
     }
     
-private void addRows(PdfPTable table) {
+private void addRows(PdfPTable table, BaseFont BaseFont) {
+	
 		
 		//заполнение таблицы вводимыми значения в текстовые поля на главной форме
-		String cell1 = Calc.NumberGet;
-		String cell2 = Calc.GroupGet;
-		String cell3 = Calc.FIOGet;
-		String cell4 = Calc.PointsGet;
+		Phrase cell1 = new Phrase(Calc.NumberGet,new Font(BaseFont,14));
+		Phrase cell2 = new Phrase(Calc.GroupGet,new Font(BaseFont,14));
+		Phrase cell3 = new Phrase(Calc.FIOGet,new Font(BaseFont,14));
+		Phrase cell4 = new Phrase(Calc.PointsGet,new Font(BaseFont,14));
 				
 		table.addCell(cell1);
 	    table.addCell(cell2);
