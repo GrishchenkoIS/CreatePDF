@@ -52,7 +52,7 @@ public class CreatePDF {
 		
 		BaseFont times = null;
 		try {
-			times = BaseFont.createFont(fontpath, "cp1251", BaseFont.EMBEDDED);
+			times = BaseFont.createFont(fontpath, "cp1251", BaseFont.EMBEDDED); 
 		} catch (DocumentException | IOException e) {
 			e.printStackTrace();
 		}
@@ -133,14 +133,14 @@ public class CreatePDF {
 	    document.close(); //закрытие и сохранение документа PDF
     }
     
-private void addRows(PdfPTable table, BaseFont BaseFont) {
+private void addRows(PdfPTable table, BaseFont Font) {
 	
 		
 		//заполнение таблицы вводимыми значения в текстовые поля на главной форме
-		Phrase cell1 = new Phrase(Calc.NumberGet,new Font(BaseFont,14));
-		Phrase cell2 = new Phrase(Calc.GroupGet,new Font(BaseFont,14));
-		Phrase cell3 = new Phrase(Calc.FIOGet,new Font(BaseFont,14));
-		Phrase cell4 = new Phrase(Calc.PointsGet,new Font(BaseFont,14));
+		Phrase cell1 = new Phrase(Calc.NumberGet,new Font(Font,14));
+		Phrase cell2 = new Phrase(Calc.GroupGet,new Font(Font,14));
+		Phrase cell3 = new Phrase(Calc.FIOGet,new Font(Font,14));
+		Phrase cell4 = new Phrase(Calc.PointsGet,new Font(Font,14));
 				
 		table.addCell(cell1);
 	    table.addCell(cell2);
