@@ -7,7 +7,10 @@
   <name>CreatePDF</name>
   <description>Test for course work to create PDF</description>
   <url>http://maven.apache.org</url>
-  
+  <properties>
+	<project.build.sourceEncoding>cp1251</project.build.sourceEncoding>
+	<project.reporting.outputEncoding>cp1251</project.reporting.outputEncoding>
+</properties>
   <build>
   <finalName>CreatePDF</finalName>
   <defaultGoal>package</defaultGoal>
@@ -69,9 +72,10 @@
             <scope>test</scope>
         </dependency>
         <dependency>
-            <groupId>javax.servlet</groupId>
-            <artifactId>javax.servlet-api</artifactId>
-            <version>3.1.0</version>
+            <groupId>jakarta.servlet</groupId>
+            <artifactId>jakarta.servlet-api</artifactId>
+            <version>5.0.0</version>
+            <scope>provided</scope>
         </dependency>
         <dependency>
             <groupId>javax.el</groupId>
